@@ -7,7 +7,7 @@ from PIL import Image
 import requests
 import os
 
-router = APIRouter()
+router = APIRouter(tags=["PHOTOROOM"])
 load_dotenv()
 
 api_key  = os.getenv("PHOTOROOM_API_KEY")
