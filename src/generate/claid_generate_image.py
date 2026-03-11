@@ -143,25 +143,25 @@ async def add_background(
 
     try:
 
-        # -----------------------------
+
         # Step 1: Read uploaded image
-        # -----------------------------
+
         image_bytes = await image_file.read()
 
         if not image_bytes:
             raise HTTPException(status_code=400, detail="Empty image file.")
 
-        # -----------------------------
+
         # Step 2: Remove background
-        # -----------------------------
+
         transparent_product = remove(image_bytes)
 
         product_buffer = io.BytesIO(transparent_product)
         product_buffer.name = "product.png"
 
-        # -----------------------------
+
         # Step 3: Upload product to Claid
-        # -----------------------------
+
         upload_headers = {
             "Authorization": f"Bearer {CLAID_API_KEY}"
         }

@@ -5,7 +5,8 @@ from src.generate.gemini_generate_image import router as gimini_route_image_gene
 from src.generate.pollination_generate_image import router as pollination_image_generator
 app = FastAPI(title = "Image Generation")
 
-app.include_router(pollination_image_generator)
+
 app.include_router(photoroom_image_generator)
 app.include_router(claid_image_generator)
 app.include_router(gimini_route_image_generator)
+app.include_router(pollination_image_generator)

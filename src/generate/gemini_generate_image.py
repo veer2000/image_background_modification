@@ -12,7 +12,7 @@ from src.services.compose_service import compose_product_on_background
 router = APIRouter(tags=["Gimini AI"])
 client = genai.Client(api_key=os.getenv('GEMINI_API_KEY'))
 
-@router.post("/generate-product-scene")
+@router.post("/gimini_generate-product-scene")
 async def generate_product_scene(
         image: UploadFile = File(...),
         prompt: str = Form(...)
