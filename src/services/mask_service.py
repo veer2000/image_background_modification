@@ -38,7 +38,8 @@ from fastapi import APIRouter, UploadFile, File
 
 # 1. Use 'u2net'. It is much better at identifying 'solid' objects
 # like this cooler compared to 'isnet'.
-session = new_session("u2net")
+session = new_session("birefnet-general")
+'''sam, bria-rmbg, birefnet-general'''
 
 
 def remove_background(image_bytes: bytes) -> Image.Image:

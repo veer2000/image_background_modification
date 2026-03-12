@@ -1,8 +1,7 @@
-fastapi
-uvicorn
-requests
-python-multipart
-httpx
-python-dotenv
-Pillow
-rembg
+fastapi==0.135.1
+Pillow==12.1.1
+protobuf==7.34.0
+python-dotenv==1.2.2
+rembg==2.0.72
+replicate==1.0.7
+Requests==2.32.5
